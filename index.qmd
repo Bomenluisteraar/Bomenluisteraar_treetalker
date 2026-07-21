@@ -98,10 +98,14 @@ rbp_data |>
 De huidige temperatuur op dit moment (laatste meting).
 
 ```{r, temperatuur_actueel_rbp}
+knitr::kable(
 rbp_data |> 
   group_by(V2) |> 
   filter(V1 == max(V1)) |> 
-  select(V2, V13)
+  select(V2, V13) |> 
+  mutate(V13 = V13/100),
+col.names = c("TreeTalker", "Temperatuur (Celsius")
+)
 ```
 
 ## Den Haag: Clingendael
@@ -119,9 +123,11 @@ De huidige temperatuur op dit moment (laatste meting).
 
 ```{r, temperatuur_actueel_clingendael}
 
-clingendael_data |>
+knitr::kable(clingendael_data |>
   group_by(V2) |> 
   filter(V1 == max(V1))  |> 
-  select(V2, V13)
-
+  select(V2, V13)  |> 
+  mutate(V13 = V13/100) ,
+col.names = c("TreeTalker", "Temperatuur (Celsius")
+)
 ```
