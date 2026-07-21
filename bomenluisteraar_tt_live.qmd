@@ -1,0 +1,175 @@
+---
+title: "De TreeTalkers van de Bomenluisteraar"
+format: html
+runtime: shiny
+---
+
+Een webpagina voor de TreeTalkers van de Bomenluisteraar met daarin enkele grafieken. We hebben een verschillende type TreeTalkers in gebruik:
+
+-   Cyber met onder meer een dendrometer en sapstroommeter ([informatie producent](https://www.nature4.org/treetalkercyber))
+
+-   Carbon met onder meer een dendrometer ([informatie producent](https://www.nature4.org/carbon))
+
+-   Soil voor het meten van bodemvocht ([informatie producent](#0))
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+source("read_tt.R")
+library(ggpubr)
+library(shiny)
+library(bslib)
+# read data
+
+# static data
+tt_rbp_info <- readODS::read_ods("data/tree_talkers_Rijsterborgherpark.ods")
+tt_clingendael_info <- readODS::read_ods("data/tree_talkers_Clingendael.ods")
+
+# live data
+rbp_live <- reactive({
+  rbind(
+    read_tt(data_id = "9B261005"), # Sequoiadendron giganteum
+    read_tt(data_id = "91261120"), # Quercus robur
+    read_tt(data_id = "9B261002"), # Fagus sylvatica
+    read_tt(data_id = "91261115"), # Broussonetia papyrifera
+    read_tt(data_id = "91261114"), # Fagus sylvatica 'Atropurpunicea'
+    read_tt(data_id = "91261121"), # cyber: tamme kastanje
+    read_tt(data_id = "9B261009") # Carpinus betulus (carbon)
+    ) |> 
+    filter(V1 >= dmy("27-03-2026")) |> 
+    inner_join(tt_rbp_info,  by = c("V2" = "treetalker_id"))
+})
+
+clingendael_live <- reactive({
+  rbind(
+    read_tt(data_id = "91261118"), # eik Japanse tuin
+    read_tt(data_id = "9B261008"), # japanse acer Japanse tuin
+    read_tt(data_id = "91261117"), # grove den Japanse tuin
+    read_tt(data_id = "91261116"), # Tilia x europaea Veteranen-linde
+    read_tt(data_id = "9B261004"), # Thuja plicata: meerstammig
+    read_tt(data_id = "9B261000"), # Tilia tomentosa met graven hondjes
+    read_tt(data_id = "9B261007") # Taxodium distichum ; Moerascipres
+  ) |> 
+    filter(V1 >= dmy("20-04-2026")) |> 
+    inner_join(tt_clingendael_info,  by = c("V2" = "treetalker_id"))
+})
+  
+```
+
+# Boomgroei
+
+De groei van de verschillende bomen in de beide parken. Deze data is nog niet genormaliseerd, maar geeft de ruwe output van de dendrometers.
+
+## Deventer: Rijsterborgherpark
+
+```{r, boomgroei_rbp}
+
+renderPlot({
+  treetalkers <- rbp_live()
+  treetalkers |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V15)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Boomgroei (d.n.)") + facet_wrap(~soort)
+})
+
+```
+
+## Den Haag: Clingendael
+
+```{r, boomgroei_clingendael}
+
+renderPlot({
+  treetalkers <- clingendael_live()
+  treetalkers |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V15)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Boomgroei (d.n.)") + facet_wrap(~soort)
+})
+
+```
+
+# Temperatuur
+
+## Deventer: Rijsterborgherpark
+
+```{r, temperatuur_rbp}
+
+renderPlot({
+  treetalkers <- rbp_live()
+  treetalkers |>
+    filter(V3==8) |> 
+    ggplot(aes(x=V1,y=V13/100)) + geom_point(aes(colour=V2), size=0.75) + 
+    labs(x="Tijd", y="Temperatuur (graden)") + geom_smooth()
+})
+
+```
+
+De huidige temperatuur op dit moment (laatste meting).
+
+```{r, temperatuur_actueel_rbp}
+renderUI({
+  treetalkers <- rbp_live() |>
+    group_by(V2) |> 
+    filter(V1 == max(V1))
+  
+  valueboxes <- lapply(
+    seq_len(nrow(treetalkers)),
+    function(i){
+      value_box(
+        title = treetalkers$V2[i],
+        value = treetalkers$V13[i]/100,
+        theme = "primary"
+      )
+      }
+    )
+  
+  do.call(
+    layout_column_wrap,
+    c(list(width = 1/4), valueboxes)
+  )
+
+})
+```
+
+## Den Haag: Clingendael
+
+```{r, temperatuur_clingendael}
+
+renderPlot({
+  treetalkers <- clingendael_live()
+  treetalkers |>
+    filter(V3==8) |> 
+    ggplot(aes(x=V1,y=V13/100)) + geom_point(aes(colour=V2), size=0.75) + 
+    labs(x="Tijd", y="Temperatuur (graden)") + geom_smooth()
+})
+
+```
+
+De huidige temperatuur op dit moment (laatste meting).
+
+```{r, temperatuur_actueel_clingendael}
+renderUI({
+  treetalkers <- clingendael_live() |>
+    group_by(V2) |> 
+    filter(V1 == max(V1))
+  
+  valueboxes <- lapply(
+    seq_len(nrow(treetalkers)),
+    function(i){
+      value_box(
+        title = treetalkers$V2[i],
+        value = treetalkers$V13[i]/100,
+        theme = "primary"
+      )
+      }
+    )
+  
+  do.call(
+    layout_column_wrap,
+    c(list(width = 1/4), valueboxes)
+  )
+
+})
+```
