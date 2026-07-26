@@ -26,6 +26,7 @@ jobs:
             any::ggpubr
             any::bslib
             any::knitr
+            any::rmarkdown
       - name: Publish to GitHub Pages (and render) 
         uses: quarto-dev/quarto-actions/publish@v2
         with:
