@@ -3,15 +3,16 @@ title: "De TreeTalkers van de Bomenluisteraar"
 format: html
 date: today
 author: Ronald Visser
-
 ---
 
 # De Bomenluisteraar: het verhaal van ons groene erfgoed
 
-De Bomenluisteraar is een door NWO-gefinancierd project [https://doi.org/10.61686/BHNSY02702](https://doi.org/10.61686/BHNSY02702). Het lectoraat [https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions](Sustainable Areas and Soil Transitions) van Saxion is hierbij penvoerder.
+De Bomenluisteraar is een door NWO-gefinancierd project <https://doi.org/10.61686/BHNSY02702>. Het lectoraat [https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions](Sustainable%20Areas%20and%20Soil%20Transitions) van Saxion is hierbij penvoerder.
 
-Projectomschrijving: 
-"Bomen vertellen een verhaal: niet alleen over hun leven, maar ook over dat van mensen. Hoe leren we luisteren naar deze vertellers? Bomen in parken spelen een belangrijke rol in ons dagelijks leven door bijvoorbeeld de lucht te zuiveren en schaduw op hete dagen te bieden. Oude bomen zijn vaak geplant door onze voorouders en leven langer dan mensen. Bomen vormen dus onze erfenis en het (groene) erfgoed, maar kunnen niet vertellen wat ze hebben meegemaakt. In de Bomenluisteraar willen wij bomen een stem geven middels multimedia en vertellen hoe bomen in parken reageren op veranderingen in verleden en heden."
+::: {.callout-tip} 
+## Projectomschrijving
+Bomen vertellen een verhaal: niet alleen over hun leven, maar ook over dat van mensen. Hoe leren we luisteren naar deze vertellers? Bomen in parken spelen een belangrijke rol in ons dagelijks leven door bijvoorbeeld de lucht te zuiveren en schaduw op hete dagen te bieden. Oude bomen zijn vaak geplant door onze voorouders en leven langer dan mensen. Bomen vormen dus onze erfenis en het (groene) erfgoed, maar kunnen niet vertellen wat ze hebben meegemaakt. In de Bomenluisteraar willen wij bomen een stem geven middels multimedia en vertellen hoe bomen in parken reageren op veranderingen in verleden en heden.
+:::
 
 Op deze webpagina wordt de data van de TreeTalkers van de Bomenluisteraar getoond door middel van enkele grafieken. We hebben een verschillende type TreeTalkers in gebruik:
 
