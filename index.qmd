@@ -97,7 +97,7 @@ rbp_data |>
 
 ```
 
-De meest recente temperatuurmeting (op: `r max(rbp_data$V1)`).
+De meest recente temperatuurmeting (op: `r with_tz(max(rbp_data$V1), "Europe/Amsterdam")`).
 
 ```{r, temperatuur_actueel_rbp}
 
@@ -136,7 +136,7 @@ clingendael_data |>
 
 ```
 
-De meest recente temperatuurmeting (op: `r max(clingendael_data$V1)`).
+De meest recente temperatuurmeting (op: `r with_tz(max(clingendael_data$V1))`).
 
 ```{r, temperatuur_actueel_clingendael}
 
