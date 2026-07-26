@@ -7,7 +7,7 @@ author: Ronald Visser
 
 # De Bomenluisteraar: het verhaal van ons groene erfgoed
 
-De Bomenluisteraar is een door NWO-gefinancierd project ( <https://doi.org/10.61686/BHNSY02702>). Het lectoraat [https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions](Sustainable%20Areas%20and%20Soil%20Transitions) van Saxion is hierbij penvoerder.
+De Bomenluisteraar is een door NWO-gefinancierd project ( <https://doi.org/10.61686/BHNSY02702>). Het lectoraat [Sustainable Areas and Soil Transitions](https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions) van Saxion is hierbij penvoerder.
 
 ::: {.callout-tip} 
 ## Projectomschrijving
