@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "index_shiny.html",
-    "href": "index_shiny.html",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "",
-    "text": "Een webpagina voor de TreeTalkers van de Bomenluisteraar met daarin enkele grafieken. We hebben een verschillende type TreeTalkers in gebruik:"
-  },
-  {
-    "objectID": "index_shiny.html#deventer-rijsterborgherpark",
-    "href": "index_shiny.html#deventer-rijsterborgherpark",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "Deventer: Rijsterborgherpark",
-    "text": "Deventer: Rijsterborgherpark"
-  },
-  {
-    "objectID": "index_shiny.html#den-haag-clingendael",
-    "href": "index_shiny.html#den-haag-clingendael",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "Den Haag: Clingendael",
-    "text": "Den Haag: Clingendael"
-  },
-  {
-    "objectID": "index_shiny.html#deventer-rijsterborgherpark-1",
-    "href": "index_shiny.html#deventer-rijsterborgherpark-1",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "Deventer: Rijsterborgherpark",
-    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\nDe huidige temperatuur op dit moment (laatste meting)."
-  },
-  {
-    "objectID": "index_shiny.html#den-haag-clingendael-1",
-    "href": "index_shiny.html#den-haag-clingendael-1",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "Den Haag: Clingendael",
-    "text": "Den Haag: Clingendael\n\n\n\n\n\nDe huidige temperatuur op dit moment (laatste meting)."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "De TreeTalkers van de Bomenluisteraar",
@@ -60,13 +25,13 @@
     "href": "index.html#deventer-rijsterborgherpark-1",
     "title": "De TreeTalkers van de Bomenluisteraar",
     "section": "Deventer: Rijsterborgherpark",
-    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting (op: 2026-07-26 10:52:56).\n\n\n\n\n\n\n\n9B261005\n20.97°C\n\n\n\n\n\n\n\n\n\n91261120\n21.05°C\n\n\n\n\n\n\n\n\n\n9B261002\n19.33°C\n\n\n\n\n\n\n\n\n\n91261115\n21.45°C\n\n\n\n\n\n\n\n\n\n91261114\n19.6°C\n\n\n\n\n\n\n\n\n\n91261121\n21.04°C\n\n\n\n\n\n\n\n\n\n9B261009\n18.91°C"
+    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting (op: 2026-07-26 13:05:31).\n\n\n\n\n\n\n\n9B261005\n19.53°C\n\n\n\n\n\n\n\n\n\n91261120\n19.63°C\n\n\n\n\n\n\n\n\n\n9B261002\n19.3°C\n\n\n\n\n\n\n\n\n\n91261115\n19.85°C\n\n\n\n\n\n\n\n\n\n91261114\n19.57°C\n\n\n\n\n\n\n\n\n\n91261121\n19.48°C\n\n\n\n\n\n\n\n\n\n9B261009\n19.32°C"
   },
   {
     "objectID": "index.html#den-haag-clingendael-1",
     "href": "index.html#den-haag-clingendael-1",
     "title": "De TreeTalkers van de Bomenluisteraar",
     "section": "Den Haag: Clingendael",
-    "text": "Den Haag: Clingendael\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting (op: 2026-07-26 10:38:26).\n\n\n\n\n\n\n\n91261118\n18.78°C\n\n\n\n\n\n\n\n\n\n9B261008\n18.97°C\n\n\n\n\n\n\n\n\n\n91261117\n18.5°C\n\n\n\n\n\n\n\n\n\n91261116\n18.91°C\n\n\n\n\n\n\n\n\n\n9B261004\n18.36°C\n\n\n\n\n\n\n\n\n\n9B261000\n19.15°C\n\n\n\n\n\n\n\n\n\n9B261007\n18.75°C"
+    "text": "Den Haag: Clingendael\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting (op: 2026-07-26 12:52:40).\n\n\n\n\n\n\n\n91261118\n21.03°C\n\n\n\n\n\n\n\n\n\n9B261008\n21.1°C\n\n\n\n\n\n\n\n\n\n91261117\n20.69°C\n\n\n\n\n\n\n\n\n\n91261116\n21.17°C\n\n\n\n\n\n\n\n\n\n9B261004\n20.61°C\n\n\n\n\n\n\n\n\n\n9B261000\n21.47°C\n\n\n\n\n\n\n\n\n\n9B261007\n21.05°C"
   }
 ]
