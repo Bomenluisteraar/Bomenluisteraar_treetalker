@@ -117,8 +117,8 @@ treetalkers <- rbp_data |>
 value_box(
   title = paste0("Gemiddelde temperatuur op ", max(treetalkers$V1)),
   value = paste0(round(mean(treetalkers$V13)/100,2), "°C"),
-  paste0("De waardes lopen uiteen van: ", round(min(treetalkers$V13)/100,2), "°C",
-         " tot: ", round(max(treetalkers$V13)/100,2), "°C"),
+  paste0("De waardes lopen uiteen van ", round(min(treetalkers$V13)/100,2), "°C",
+         " tot ", round(max(treetalkers$V13)/100,2), "°C"),
   showcase = bs_icon("thermometer"),
   theme = "primary",
   )
@@ -147,8 +147,8 @@ De meest recente temperatuurmeting (op: `r max(clingendael_data$V1)`).
 value_box(
   title = paste0("Gemiddelde temperatuur op ", max(treetalkers$V1)),
   value = paste0(round(mean(treetalkers$V13)/100,2), "°C"),
-  paste0("De waardes lopen uiteen van: ", round(min(treetalkers$V13)/100,2), "°C",
-         " tot: ", round(max(treetalkers$V13)/100,2), "°C"),
+  paste0("De waardes lopen uiteen van ", round(min(treetalkers$V13)/100,2), "°C",
+         " tot ", round(max(treetalkers$V13)/100,2), "°C"),
   showcase = bs_icon("thermometer"),
   theme = "primary",
   )
