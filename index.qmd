@@ -136,7 +136,7 @@ clingendael_data |>
 
 ```
 
-De meest recente temperatuurmeting (op: `r max(clingendael_data$V1)`).
+De meest recente temperatuurmeting.
 
 ```{r, temperatuur_actueel_clingendael}
 
