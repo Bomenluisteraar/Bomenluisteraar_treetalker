@@ -105,48 +105,23 @@ rbp_data |>
 
 ```
 
-De meest recente temperatuurmeting (op: `r max(rbp_data$V1)`).
+De meest recente temperatuurmeting.
 
 ```{r, temperatuur_actueel_rbp}
 
-
-  treetalkers <- rbp_data |>
-    group_by(V2) |> 
-    filter(V1 == max(V1))
-  
-  valueboxes <- lapply(
-    seq_len(nrow(treetalkers)),
-    function(i){
-      value_box(
-        title = treetalkers$V2[i],
-        value = paste0(treetalkers$V13[i]/100, "°C"),
-        theme = "primary"
-        #showcase = bs_icon("thermometer", size = "0.5em"),
-        #showcase_layout = "left center"
-      )
-      }
-    )
-  
-  do.call(
-    layout_column_wrap,
-    c(list(width = 1/4), valueboxes))
-  
-```
-testje
-
-```{r, temperatuur_actueel_rbp2}
-
 treetalkers <- rbp_data |>
-    group_by(V2) |> 
-    filter(V1 == max(V1))
+  group_by(V2) |> 
+  filter(V1 == max(V1))
+  
   
 value_box(
-  title = "Gemiddelde temperatuur",
-  value = mean(treetalkers$V1)/100,
-  showcase = bs_icon("thermometer),
-  p(paste0("laagste waarde: ", min(treetalkers$V1)/100)),
-  p(paste0("hoogste waarde: ", max(treetalkers$V1)/100))
-)
+  title = paste0("Gemiddelde temperatuur op ", max(treetalkers$V1)),
+  value = paste0(round(mean(treetalkers$V13)/100,2), "°C"),
+  paste0("De waardes lopen uiteen van: ", round(min(treetalkers$V13)/100,2), "°C",
+         " tot: ", round(max(treetalkers$V13)/100,2), "°C"),
+  showcase = bs_icon("thermometer"),
+  theme = "primary",
+  )
 
 ```
 
@@ -169,21 +144,13 @@ De meest recente temperatuurmeting (op: `r max(clingendael_data$V1)`).
     group_by(V2) |> 
     filter(V1 == max(V1))
   
-  valueboxes <- lapply(
-    seq_len(nrow(treetalkers)),
-    function(i){
-      value_box(
-        title = treetalkers$V2[i],
-        value = paste0(treetalkers$V13[i]/100, "°C"),
-        theme = "primary"
-        #showcase = bs_icon("thermometer", size = "0.5em"),
-        #showcase_layout = "left center"
-      )
-      }
-    )
-  
-  do.call(
-    layout_column_wrap,
-    c(list(width = 1/4), valueboxes))
+value_box(
+  title = paste0("Gemiddelde temperatuur op ", max(treetalkers$V1)),
+  value = paste0(round(mean(treetalkers$V13)/100,2), "°C"),
+  paste0("De waardes lopen uiteen van: ", round(min(treetalkers$V13)/100,2), "°C",
+         " tot: ", round(max(treetalkers$V13)/100,2), "°C"),
+  showcase = bs_icon("thermometer"),
+  theme = "primary",
+  )
 
 ```
