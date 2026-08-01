@@ -28,7 +28,7 @@ library(lubridate)
 source("read_tt.R")
 library(ggpubr)
 library(bslib)
-#library(bsicons)
+library(bsicons)
 
 # read data
 
@@ -131,6 +131,23 @@ De meest recente temperatuurmeting (op: `r max(rbp_data$V1)`).
     layout_column_wrap,
     c(list(width = 1/4), valueboxes))
   
+```
+testje
+
+```{r, temperatuur_actueel_rbp2}
+
+treetalkers <- rbp_data |>
+    group_by(V2) |> 
+    filter(V1 == max(V1))
+  
+value_box(
+  title = "Gemiddelde temperatuur",
+  value = mean(treetalkers$V1)/100,
+  showcase = bs_icon("thermometer),
+  p(paste0("laagste waarde: ", min(treetalkers$V1)/100)),
+  p(paste0("hoogste waarde: ", max(treetalkers$V1)/100))
+)
+
 ```
 
 ## Den Haag: Clingendael
