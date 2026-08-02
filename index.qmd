@@ -92,7 +92,58 @@ clingendael_data |>
 
 ```
 
-# Temperatuur
+# Beweging van de bomen
+De TreeTalkers zijn uitgerust met een sensor die de beweging meet. De onderstaande grafieken laten de standaard deviatie zien van de verplaatsing in de x,y en z-richting en daarmee hoe sterk de beweging is.
+
+## Deventer: Rijsterborgherpark
+
+```{r, boomgbeweging_rbp, fig.height=11}
+
+ggarrange(
+  rbp_data |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V6)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in x-richting (st.dev)") + 
+    facet_wrap(~soort, ncol = 1, labeller = label_wrap_gen(width = 15) ),
+  rbp_data |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V8)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in y-richting (st.dev)") +
+    facet_wrap(~soort, ncol = 1, labeller = label_wrap_gen(width = 15) ),
+  rbp_data |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V10)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in z-richting (st.dev)") + 
+    facet_wrap(~soort, ncol = 1, labeller = label_wrap_gen(width = 15) ),
+  ncol = 3)
+```
+
+
+## Den Haag: Clingendael
+
+```{r, boomgbeweging_clingendael, fig.height=11}
+
+ggarrange(
+  clingendael_data |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V6)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in x-richting (st.dev)") + 
+    facet_wrap(~soort, ncol = 1, labeller = label_wrap_gen(width = 15) ),
+  clingendael_data |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V8)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in y-richting (st.dev)") +
+    facet_wrap(~soort, ncol = 1, labeller = label_wrap_gen(width = 15) ),
+  clingendael_data |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V10)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in z-richting (st.dev)") + 
+    facet_wrap(~soort, ncol = 1, labeller = label_wrap_gen(width = 15) ),
+  ncol = 3)
+```
+
+
+# Temperatuur en luchtvochtigheid
 
 ## Deventer: Rijsterborgherpark
 
@@ -125,6 +176,18 @@ value_box(
 
 ```
 
+De luchtvochtigheid over de tijd.
+
+```{r, luchtvochtigheid_rbp}
+
+rbp_data |>
+  filter(V3==8) |> 
+  ggplot(aes(x=V1,y=V14/100)) + geom_point(aes(colour=V2), size = 0.75) + 
+  labs(x="Tijd", y="Luchtvochtigheid (%)") + geom_smooth()
+
+```
+
+
 ## Den Haag: Clingendael
 
 ```{r, temperatuur_clingendael}
@@ -154,3 +217,38 @@ value_box(
   )
 
 ```
+
+De luchtvochtigheid over de tijd.
+
+```{r, luchtvochtigheid_clingendael}
+
+clingendael_data |>
+  filter(V3==8) |> 
+  ggplot(aes(x=V1,y=V14/100)) + geom_point(aes(colour=V2), size = 0.75) + 
+  labs(x="Tijd", y="Luchtvochtigheid (%)") + geom_smooth()
+
+```
+
+
+# Batterijen van de verschillende sensoren
+
+## Deventer: Rijsterborgherpark
+
+```{r, batterij_clingendael}
+rbp_data |>
+  filter(V3==8) |> 
+  ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
+  geom_hline(yintercept = 3600, colour = "red") +
+  labs(x="Tijd", y="Voltage (millivolt)")
+```
+
+## Den Haag: Clingendael
+
+```{r, batterij_rbp}
+clingendael_data |>
+  filter(V3==8) |> 
+  ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
+  geom_hline(yintercept = 3600, colour = "red") +
+  labs(x="Tijd", y="Voltage (millivolt)")
+```
+
