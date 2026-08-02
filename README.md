@@ -1,3 +1,6 @@
+[![pages-build-deployment](https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker/actions/workflows/pages/pages-build-deployment)
+
+[![Quarto Publish](https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker/actions/workflows/quarto-publish.yml)
 
 De Bomenluisteraar is een door NWO-gefinancierd project (<https://doi.org/10.61686/BHNSY02702>). Het lectoraat [Sustainable Areas and Soil Transitions](https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions) van Saxion is hierbij penvoerder en voert het uit samen met het lectoraat [Civic Technology](https://www.dehaagsehogeschool.nl/onderzoek/lectoraten/civic-technology) van de Haagse Hogeschool, samen met partners: de gemeentes [Den Haag](https://www.denhaag.nl) en [Deventer](https://www.deventer.nl/), de [Rijksdienst voor het Cultureel Erfgoed](https://www.cultureelerfgoed.nl/), [Erfgoedhuis Zuid-Holland](https://www.erfgoedhuis-zh.nl/), [Climate Adaptation Services](https://climateadaptationservices.com/) en [Deventer Verhaal](https://deventerverhaal.nl/).
 
