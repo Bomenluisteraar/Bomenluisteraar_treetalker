@@ -33,6 +33,8 @@ jobs:
             any::rmarkdown
             any::readODS
             any::bsicons
+            any::sf
+            any::leaflet
       - name: Publish to GitHub Pages (and render) 
         uses: quarto-dev/quarto-actions/publish@v2
         with:

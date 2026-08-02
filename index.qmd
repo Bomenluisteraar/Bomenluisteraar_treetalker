@@ -29,12 +29,18 @@ source("read_tt.R")
 library(ggpubr)
 library(bslib)
 library(bsicons)
+library(sf)
+library(leaflet)
 
 # read data
 
 # static data
 tt_rbp_info <- readODS::read_ods("data/tree_talkers_Rijsterborgherpark.ods")
 tt_clingendael_info <- readODS::read_ods("data/tree_talkers_Clingendael.ods")
+
+tt_rbp_info <- st_as_sf(tt_rbp_info, coords = c("x_rd", "y_rd"),crs = 28992)
+tt_clingendael_info <- st_as_sf(tt_clingendael_info, coords = c("x_rd", "y_rd"),crs = 28992)
+
 
 # live data
 rbp_data <- rbind(
@@ -64,6 +70,36 @@ clingendael_data <- rbind(
     inner_join(tt_clingendael_info,  by = c("V2" = "treetalker_id"))
 
 ```
+
+# Kaart met de verschillense sensoren
+
+## Deventer: Rijsterborgherpark
+
+```{r, locaties_rbp}
+
+treetalkers <- tt_rbp_info |> 
+  filter(!treetalker_id %in% c("93261020","93261019"))
+
+leaflet(st_transform(treetalkers, crs = 4326)) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~as.character(soort)) 
+
+```
+
+## Den Haag: Clingendael
+
+```{r, locaties_clingendael}
+
+treetalkers <- tt_clingendael_info |> 
+  filter(!treetalker_id %in% c("93261021","93261024", "93261027"))
+
+leaflet(st_transform(treetalkers, crs = 4326)) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~as.character(soort)) 
+
+
+```
+
 
 # Boomgroei
 
