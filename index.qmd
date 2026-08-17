@@ -150,7 +150,7 @@ Naast de boomgroei monitoren we ook het vocht in de bodem met een aantal sensore
 
 ## Deventer: Rijsterborgherpark
 
-```{r, bodemvocht_clingendael}
+```{r, bodemvocht_rbp}
 
 ggarrange(
   rbp_soil |> 
