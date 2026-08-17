@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: Bomenluisteraar: TreeTalkers site
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Ronald M.
+    family-names: Visser
+    orcid: 'https://orcid.org/0000-0001-6966-1729'
+repository-code: 'https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker'
+abstract: 'This repository contains the code that creates a website to visualise the data of various TreeTalkers used in De Bomenluisteraar'
+keywords:
+  - dendrochronology
+  - data
+  - download
+  - dendrometer
+  - tree ring
+  - heritage
+license: GPL-3.0
+version: '1.0'
