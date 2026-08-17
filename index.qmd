@@ -69,6 +69,23 @@ clingendael_data <- rbind(
     filter(V1 >= dmy("20-04-2026")) |> 
     inner_join(tt_clingendael_info,  by = c("V2" = "treetalker_id"))
 
+rbp_soil <- rbind(
+      read_tt(data_id = "93261020"),
+      read_tt(data_id = "93261019")
+      ) |> 
+  mutate(V1 = with_tz(V1, "Europe/Amsterdam")) |>
+  filter(V1 >= dmy("27-03-2026")) |> 
+  inner_join(tt_rbp_info,  by = c("V2" = "treetalker_id"))
+
+clingendael_soil <- rbind(
+      read_tt(data_id = "93261021"),
+      read_tt(data_id = "93261024"),
+      read_tt(data_id = "93261027")
+      ) |> 
+  mutate(V1 = with_tz(V1, "Europe/Amsterdam")) |>
+  filter(V1 >= dmy("20-04-2026")) |> 
+  inner_join(tt_rbp_info,  by = c("V2" = "treetalker_id"))
+
 ```
 
 # Kaart met de verschillense sensoren
@@ -127,6 +144,50 @@ clingendael_data |>
 
 
 ```
+
+# Bodemvocht
+Naast de boomgroei monitoren we ook het vocht in de bodem met een aantal sensoren, om dit te relateren aan de boomgroei en droogte/vernatting. Deze waardes zijn momenteel nog niet gekalibreerd.
+
+## Deventer: Rijsterborgherpark
+
+```{r, bodemvocht_clingendael}
+
+ggarrange(
+  rbp_soil |> 
+    ggplot(aes(x=V1,y=V12/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Temperatuur (graden)"),
+  rbp_soil |> 
+    ggplot(aes(x=V1,y=V13/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Luchtvochtigheid (%)"),
+  rbp_soil |> 
+    ggplot(aes(x=V1,y=V15/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Bodemtemperatuur (raw Ohm)"),
+  rbp_soil |> 
+    ggplot(aes(x=V1,y=V14/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Bodemvochtigheid (raw_mv)"),
+  nrow = 2, ncol = 2)
+```
+
+## Den Haag: Clingendael
+
+```{r, bodemvocht_clingendael}
+
+ggarrange(
+  clingendael_soil |> 
+    ggplot(aes(x=V1,y=V12/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Temperatuur (graden)"),
+  clingendael_soil |> 
+    ggplot(aes(x=V1,y=V13/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Luchtvochtigheid (%)"),
+  clingendael_soil |> 
+    ggplot(aes(x=V1,y=V15/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Bodemtemperatuur (raw Ohm)"),
+  clingendael_soil |> 
+    ggplot(aes(x=V1,y=V14/100)) + geom_line(aes(colour=V2)) + 
+    labs(x="Tijd", y="Bodemvochtigheid (raw_mv)"),
+  nrow = 2, ncol = 2)
+```
+
 
 # Beweging van de bomen
 De TreeTalkers zijn uitgerust met een sensor die de beweging meet. De onderstaande grafieken laten de standaard deviatie zien van de verplaatsing in de x,y en z-richting en daarmee hoe sterk de beweging is.
