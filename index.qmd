@@ -148,7 +148,7 @@ clingendael_data |>
 ```
 
 # Bodemvocht
-Naast de boomgroei monitoren we ook het vocht in de bodem met een aantal sensoren, om dit te relateren aan de boomgroei en droogte/vernatting. Deze waardes zijn momenteel nog niet gekalibreerd.
+Naast de boomgroei monitoren we ook het vocht in de bodem met een aantal sensoren, om dit te relateren aan de boomgroei en droogte/vernatting. Deze waardes zijn momenteel nog niet gekalibreerd. Wanneer de waardes in mV toenemen bij het bodemvochtigheid, betekent dit dat de hoeveelheid vocht afneemt.
 
 ## Deventer: Rijsterborgherpark
 
