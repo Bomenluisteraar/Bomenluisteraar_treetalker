@@ -74,6 +74,7 @@ rbp_soil <- rbind(
       read_tt(data_id = "93261019")
       ) |> 
   mutate(V1 = with_tz(V1, "Europe/Amsterdam")) |>
+  mutate(V2 = as.character(V2)) |> 
   filter(V1 >= dmy("27-03-2026")) |> 
   inner_join(tt_rbp_info,  by = c("V2" = "treetalker_id"))
 
@@ -83,8 +84,9 @@ clingendael_soil <- rbind(
       read_tt(data_id = "93261027")
       ) |> 
   mutate(V1 = with_tz(V1, "Europe/Amsterdam")) |>
+  mutate(V2 = as.character(V2)) |> 
   filter(V1 >= dmy("20-04-2026")) |> 
-  inner_join(tt_rbp_info,  by = c("V2" = "treetalker_id"))
+  inner_join(tt_clingendael_info,  by = c("V2" = "treetalker_id"))
 
 ```
 
