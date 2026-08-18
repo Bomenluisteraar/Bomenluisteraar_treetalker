@@ -2,7 +2,7 @@
 title: "De TreeTalkers van de Bomenluisteraar"
 format: html
 date: today
-author: Ronald Visser
+author: Ronald M. Visser
 ---
 
 De Bomenluisteraar is een door NWO-gefinancierd project (<https://doi.org/10.61686/BHNSY02702>). Het lectoraat [Sustainable Areas and Soil Transitions](https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions) van Saxion is hierbij penvoerder en voert het uit samen met het lectoraat [Civic Technology](https://www.dehaagsehogeschool.nl/onderzoek/lectoraten/civic-technology) van de Haagse Hogeschool, samen met partners: de gemeentes [Den Haag](https://www.denhaag.nl) en [Deventer](https://www.deventer.nl/), de [Rijksdienst voor het Cultureel Erfgoed](https://www.cultureelerfgoed.nl/), [Erfgoedhuis Zuid-Holland](https://www.erfgoedhuis-zh.nl/), [Climate Adaptation Services](https://climateadaptationservices.com/) en [Deventer Verhaal](https://deventerverhaal.nl/).
@@ -131,7 +131,8 @@ De groei van de verschillende bomen in de beide parken. Deze data is nog niet ge
 rbp_data |>
   filter(V3==8) |>
   ggplot(aes(x=V1,y=V15)) + geom_line(aes(colour=V2)) + 
-  labs(x="Tijd", y="Boomgroei (d.n.)") + facet_wrap(~soort)
+  labs(x="Tijd", y="Boomgroei (d.n.)") + facet_wrap(~soort) + 
+  scale_color_discrete(name = "Sensornummer")
 
 ```
 
@@ -142,8 +143,8 @@ rbp_data |>
 clingendael_data |>
   filter(V3==8) |>
   ggplot(aes(x=V1,y=V15)) + geom_line(aes(colour=V2)) + 
-  labs(x="Tijd", y="Boomgroei (d.n.)") + facet_wrap(~soort)
-
+  labs(x="Tijd", y="Boomgroei (d.n.)") + facet_wrap(~soort) + 
+  scale_color_discrete(name = "Sensornummer")
 
 ```
 
@@ -153,21 +154,17 @@ Naast de boomgroei monitoren we ook het vocht in de bodem met een aantal sensore
 ## Deventer: Rijsterborgherpark
 
 ```{r, bodemvocht_rbp}
-
 ggarrange(
   rbp_soil |> 
-    ggplot(aes(x=V1,y=V12/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Temperatuur (graden)"),
-  rbp_soil |> 
-    ggplot(aes(x=V1,y=V13/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Luchtvochtigheid (%)"),
-  rbp_soil |> 
     ggplot(aes(x=V1,y=V15/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Bodemtemperatuur (raw Ohm)"),
+    labs(x="Tijd", y="Bodemtemperatuur (raw Ohm)") +
+    scale_color_discrete(guide="none"),
   rbp_soil |> 
     ggplot(aes(x=V1,y=V14/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Bodemvochtigheid (raw_mv)"),
-  nrow = 2, ncol = 2)
+    labs(x="Tijd", y="Bodemvochtigheid (raw_mv)") + 
+    scale_color_discrete(name = "Sensornummer"),
+  ncol = 2, widths = c(0.75, 1))
+
 ```
 
 ## Den Haag: Clingendael
@@ -176,18 +173,15 @@ ggarrange(
 
 ggarrange(
   clingendael_soil |> 
-    ggplot(aes(x=V1,y=V12/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Temperatuur (graden)"),
-  clingendael_soil |> 
-    ggplot(aes(x=V1,y=V13/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Luchtvochtigheid (%)"),
-  clingendael_soil |> 
     ggplot(aes(x=V1,y=V15/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Bodemtemperatuur (raw Ohm)"),
+    labs(x="Tijd", y="Bodemtemperatuur (raw Ohm)") +
+    scale_color_discrete(guide="none"),
   clingendael_soil |> 
     ggplot(aes(x=V1,y=V14/100)) + geom_line(aes(colour=V2)) + 
-    labs(x="Tijd", y="Bodemvochtigheid (raw_mv)"),
-  nrow = 2, ncol = 2)
+    labs(x="Tijd", y="Bodemvochtigheid (raw_mv)") + 
+    scale_color_discrete(name = "Sensornummer"),
+  ncol = 2, widths = c(0.75, 1))
+
 ```
 
 
@@ -251,7 +245,8 @@ ggarrange(
 rbp_data |>
     filter(V3==8) |> 
     ggplot(aes(x=V1,y=V13/100)) + geom_point(aes(colour=V2), size=0.75) + 
-    labs(x="Tijd", y="Temperatuur (graden)") + geom_smooth()
+    labs(x="Tijd", y="Temperatuur (graden)") + geom_smooth() + 
+    scale_color_discrete(name = "Sensornummer")
 
 ```
 
@@ -282,7 +277,8 @@ De luchtvochtigheid over de tijd.
 rbp_data |>
   filter(V3==8) |> 
   ggplot(aes(x=V1,y=V14/100)) + geom_point(aes(colour=V2), size = 0.75) + 
-  labs(x="Tijd", y="Luchtvochtigheid (%)") + geom_smooth()
+  labs(x="Tijd", y="Luchtvochtigheid (%)") + geom_smooth() + 
+  scale_color_discrete(name = "Sensornummer")
 
 ```
 
@@ -338,7 +334,8 @@ rbp_data |>
   filter(V3==8) |> 
   ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
   geom_hline(yintercept = 3600, colour = "red") +
-  labs(x="Tijd", y="Voltage (millivolt)")
+  labs(x="Tijd", y="Voltage (millivolt)") + 
+  scale_color_discrete(name = "Sensornummer")
 ```
 
 ## Den Haag: Clingendael
@@ -348,6 +345,8 @@ clingendael_data |>
   filter(V3==8) |> 
   ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
   geom_hline(yintercept = 3600, colour = "red") +
-  labs(x="Tijd", y="Voltage (millivolt)")
+  labs(x="Tijd", y="Voltage (millivolt)") + 
+    scale_color_discrete(name = "Sensornummer")
+
 ```
 

@@ -1,0 +1,27 @@
+---
+title: "Over deze website"
+author: "Ronald M. Visser"
+format: html
+date: today
+---
+
+De Bomenluisteraar is een door NWO-gefinancierd project (<https://doi.org/10.61686/BHNSY02702>). Het lectoraat [Sustainable Areas and Soil Transitions](https://www.saxion.nl/onderzoek/lectoraten/sustainable-areas-and-soil-transitions) van Saxion is hierbij penvoerder en voert het uit samen met het lectoraat [Civic Technology](https://www.dehaagsehogeschool.nl/onderzoek/lectoraten/civic-technology) van de Haagse Hogeschool, samen met partners: de gemeentes [Den Haag](https://www.denhaag.nl) en [Deventer](https://www.deventer.nl/), de [Rijksdienst voor het Cultureel Erfgoed](https://www.cultureelerfgoed.nl/), [Erfgoedhuis Zuid-Holland](https://www.erfgoedhuis-zh.nl/), [Climate Adaptation Services](https://climateadaptationservices.com/) en [Deventer Verhaal](https://deventerverhaal.nl/).
+
+::: callout-tip
+## De Bomenluisteraar: het verhaal van ons groene erfgoed
+
+Bomen vertellen een verhaal: niet alleen over hun leven, maar ook over dat van mensen. Hoe leren we luisteren naar deze vertellers? Bomen in parken spelen een belangrijke rol in ons dagelijks leven door bijvoorbeeld de lucht te zuiveren en schaduw op hete dagen te bieden. Oude bomen zijn vaak geplant door onze voorouders en leven langer dan mensen. Bomen vormen dus onze erfenis en het (groene) erfgoed, maar kunnen niet vertellen wat ze hebben meegemaakt. In de Bomenluisteraar willen wij bomen een stem geven middels multimedia en vertellen hoe bomen in parken reageren op veranderingen in verleden en heden.
+:::
+
+De sensoren zijn ophangen op verschillende momenten, waarbij we uitermate dankbaar zijn voor de hulp van (op alfabetische volgorde van de voornaam):
+
+-   Aryan Anbaei,
+-   Julian Domenget,
+-   Kris Brusse,
+-   Levi Schilperoordt,
+-   Lisanne Hagen,
+-   Mickey Koeze,
+-   Myron Plugge,
+-   Paul Mondelaers,
+-   Rick van Cleef,
+-   Stichting Vogeleiland Deventer
