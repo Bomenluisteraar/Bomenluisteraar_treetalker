@@ -2,7 +2,11 @@ project:
   type: website
 
 website:
+  page-navigation: true
   title: "Bomenluisteraar: treetalkers"
+  site-url: "https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/"
+  repo-url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker
+  repo-actions: [issue]
   navbar:
     left:
       - href: index.qmd
@@ -11,7 +15,13 @@ website:
         text: "Batterijspanning"
       - href: about.qmd
         text: "Over deze website"
-
+    right:
+      - icon: github
+        menu:
+          - text: Source code
+            url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker
+          - text: Report a Bug
+            url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker/issues
 format:
   html:
     theme: cosmo
