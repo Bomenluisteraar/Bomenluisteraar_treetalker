@@ -88,6 +88,11 @@ clingendael_soil <- rbind(
   filter(V1 >= dmy("20-04-2026")) |> 
   inner_join(tt_clingendael_info,  by = c("V2" = "treetalker_id"))
 
+saveRDS(clingendael_data, "data/clingendael_data.rds")
+saveRDS(clingendael_soil, "data/clingendael_soil.rds")
+saveRDS(rbp_data, "data/rbp_data.rds")
+saveRDS(rbp_soil, "data/rbp_soil.rds")
+
 ```
 
 # Kaart met de verschillense sensoren
@@ -324,29 +329,4 @@ clingendael_data |>
 
 ```
 
-
-# Batterijen van de verschillende sensoren
-
-## Deventer: Rijsterborgherpark
-
-```{r, batterij_clingendael}
-rbp_data |>
-  filter(V3==8) |> 
-  ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
-  geom_hline(yintercept = 3600, colour = "red") +
-  labs(x="Tijd", y="Voltage (millivolt)") + 
-  scale_color_discrete(name = "Sensornummer")
-```
-
-## Den Haag: Clingendael
-
-```{r, batterij_rbp}
-clingendael_data |>
-  filter(V3==8) |> 
-  ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
-  geom_hline(yintercept = 3600, colour = "red") +
-  labs(x="Tijd", y="Voltage (millivolt)") + 
-    scale_color_discrete(name = "Sensornummer")
-
-```
 

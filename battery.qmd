@@ -1,0 +1,70 @@
+---
+title: "Batterijen"
+format: html
+date: today
+author: Ronald M. Visser
+---
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(ggplot2)
+library(dplyr)
+library(ggpubr)
+library(sf)
+
+# read data
+
+clingendael_data <- readRDS("data/clingendael_data.rds")
+clingendael_soil <- readRDS("data/clingendael_soil.rds")
+
+rbp_data <- readRDS("data/rbp_data.rds")
+rbp_soil <- readRDS("data/rbp_soil.rds")
+
+```
+
+# Batterijen van de verschillende sensoren
+
+Dit deel van de website is ter controle van de batterijspanning. Wanneer deze onder de 3600 mV komt, dient de batterij vervangen en opgeladen te worden.
+
+## Deventer: Rijsterborgherpark
+
+```{r, batterij_rbp, fig.height=8}
+
+ggarrange(
+  rbp_data |>
+    filter(V3==8) |> 
+    ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
+    geom_hline(yintercept = 3600, colour = "red") +
+    labs(x="Tijd", y="Voltage (millivolt)", title = "Boomsensoren") + 
+    scale_color_discrete(name = "Sensornummer"),
+  rbp_soil |>
+    filter(V3==3) |> 
+    ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
+    geom_hline(yintercept = 3600, colour = "red") +
+    labs(x="Tijd", y="Voltage (millivolt)", title = "Bodemsensoren") + 
+    scale_color_discrete(name = "Sensornummer"),
+  nrow = 2)
+
+```
+
+## Den Haag: Clingendael
+
+```{r, batterij_clingendael, fig.height=10}
+
+ggarrange(
+  clingendael_data |>
+    filter(V3==8) |> 
+    ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
+    geom_hline(yintercept = 3600, colour = "red") +
+    labs(x="Tijd", y="Voltage (millivolt)", title = "Boomsensoren") + 
+    scale_color_discrete(name = "Sensornummer"),
+  clingendael_soil |>
+    filter(V3==3) |> 
+    ggplot(aes(x=V1,y=V11)) + geom_line(aes(colour=V2)) +
+    geom_hline(yintercept = 3600, colour = "red") +
+    labs(x="Tijd", y="Voltage (millivolt)", title = "Bodemsensoren") + 
+    scale_color_discrete(name = "Sensornummer"),
+  nrow = 2)
+
+```
+
