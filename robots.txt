@@ -1,1 +1,1 @@
-Sitemap: https://Bomenluisteraar.github.io/Bomenluisteraar_treetalker/sitemap.xml
+Sitemap: https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/sitemap.xml

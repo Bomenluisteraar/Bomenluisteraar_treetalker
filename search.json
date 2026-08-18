@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "battery.html",
+    "href": "battery.html",
+    "title": "Batterijen",
+    "section": "",
+    "text": "Dit deel van de website is ter controle van de batterijspanning. Wanneer deze onder de 3600 mV komt, dient de batterij vervangen en opgeladen te worden."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Over deze website",
+    "section": "",
+    "text": "De Bomenluisteraar is een door NWO-gefinancierd project (https://doi.org/10.61686/BHNSY02702). Het lectoraat Sustainable Areas and Soil Transitions van Saxion is hierbij penvoerder en voert het uit samen met het lectoraat Civic Technology van de Haagse Hogeschool, samen met partners: de gemeentes Den Haag en Deventer, de Rijksdienst voor het Cultureel Erfgoed, Erfgoedhuis Zuid-Holland, Climate Adaptation Services en Deventer Verhaal.\n\n\n\n\n\n\nTipDe Bomenluisteraar: het verhaal van ons groene erfgoed\n\n\n\nBomen vertellen een verhaal: niet alleen over hun leven, maar ook over dat van mensen. Hoe leren we luisteren naar deze vertellers? Bomen in parken spelen een belangrijke rol in ons dagelijks leven door bijvoorbeeld de lucht te zuiveren en schaduw op hete dagen te bieden. Oude bomen zijn vaak geplant door onze voorouders en leven langer dan mensen. Bomen vormen dus onze erfenis en het (groene) erfgoed, maar kunnen niet vertellen wat ze hebben meegemaakt. In de Bomenluisteraar willen wij bomen een stem geven middels multimedia en vertellen hoe bomen in parken reageren op veranderingen in verleden en heden.\n\n\nDe sensoren zijn ophangen op verschillende momenten, waarbij we uitermate dankbaar zijn voor de hulp van (op alfabetische volgorde van de voornaam):\n\nAryan Anbaei,\nJulian Domenget,\nKris Brusse,\nLevi Schilperoordt,\nLisanne Hagen,\nMickey Koeze,\nMyron Plugge,\nPaul Mondelaers,\nRick van Cleef,\nStichting Vogeleiland Deventer"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "De TreeTalkers van de Bomenluisteraar",
@@ -67,34 +81,13 @@
     "href": "index.html#deventer-rijsterborgherpark-4",
     "title": "De TreeTalkers van de Bomenluisteraar",
     "section": "Deventer: Rijsterborgherpark",
-    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-08-18 09:35:00\n16.09°C\nDe waardes lopen uiteen van 15.81°C tot 16.3°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
+    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-08-18 09:57:35\n16.23°C\nDe waardes lopen uiteen van 16.07°C tot 16.36°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
   },
   {
     "objectID": "index.html#den-haag-clingendael-4",
     "href": "index.html#den-haag-clingendael-4",
     "title": "De TreeTalkers van de Bomenluisteraar",
     "section": "Den Haag: Clingendael",
-    "text": "Den Haag: Clingendael\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-08-18 09:26:42\n18.43°C\nDe waardes lopen uiteen van 18.05°C tot 18.79°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
-  },
-  {
-    "objectID": "index.html#deventer-rijsterborgherpark-5",
-    "href": "index.html#deventer-rijsterborgherpark-5",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "Deventer: Rijsterborgherpark",
-    "text": "Deventer: Rijsterborgherpark"
-  },
-  {
-    "objectID": "index.html#den-haag-clingendael-5",
-    "href": "index.html#den-haag-clingendael-5",
-    "title": "De TreeTalkers van de Bomenluisteraar",
-    "section": "Den Haag: Clingendael",
-    "text": "Den Haag: Clingendael"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Over deze website",
-    "section": "",
-    "text": "De Bomenluisteraar is een door NWO-gefinancierd project (https://doi.org/10.61686/BHNSY02702). Het lectoraat Sustainable Areas and Soil Transitions van Saxion is hierbij penvoerder en voert het uit samen met het lectoraat Civic Technology van de Haagse Hogeschool, samen met partners: de gemeentes Den Haag en Deventer, de Rijksdienst voor het Cultureel Erfgoed, Erfgoedhuis Zuid-Holland, Climate Adaptation Services en Deventer Verhaal.\n\n\n\n\n\n\nTipDe Bomenluisteraar: het verhaal van ons groene erfgoed\n\n\n\nBomen vertellen een verhaal: niet alleen over hun leven, maar ook over dat van mensen. Hoe leren we luisteren naar deze vertellers? Bomen in parken spelen een belangrijke rol in ons dagelijks leven door bijvoorbeeld de lucht te zuiveren en schaduw op hete dagen te bieden. Oude bomen zijn vaak geplant door onze voorouders en leven langer dan mensen. Bomen vormen dus onze erfenis en het (groene) erfgoed, maar kunnen niet vertellen wat ze hebben meegemaakt. In de Bomenluisteraar willen wij bomen een stem geven middels multimedia en vertellen hoe bomen in parken reageren op veranderingen in verleden en heden.\n\n\nDe sensoren zijn ophangen op verschillende momenten, waarbij we uitermate dankbaar zijn voor de hulp van (op alfabetische volgorde van de voornaam):\n\nAryan Anbaei,\nJulian Domenget,\nKris Brusse,\nLevi Schilperoordt,\nLisanne Hagen,\nMickey Koeze,\nMyron Plugge,\nPaul Mondelaers,\nRick van Cleef,\nStichting Vogeleiland Deventer"
+    "text": "Den Haag: Clingendael\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-08-18 09:42:52\n18.52°C\nDe waardes lopen uiteen van 18.05°C tot 19°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
   }
 ]
