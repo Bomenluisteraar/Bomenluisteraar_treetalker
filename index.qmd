@@ -12,7 +12,7 @@ De Bomenluisteraar is een door NWO-gefinancierd project (<https://doi.org/10.616
 Bomen vertellen een verhaal: niet alleen over hun leven, maar ook over dat van mensen. Hoe leren we luisteren naar deze vertellers? Bomen in parken spelen een belangrijke rol in ons dagelijks leven door bijvoorbeeld de lucht te zuiveren en schaduw op hete dagen te bieden. Oude bomen zijn vaak geplant door onze voorouders en leven langer dan mensen. Bomen vormen dus onze erfenis en het (groene) erfgoed, maar kunnen niet vertellen wat ze hebben meegemaakt. In de Bomenluisteraar willen wij bomen een stem geven middels multimedia en vertellen hoe bomen in parken reageren op veranderingen in verleden en heden.
 :::
 
-Op deze webpagina worden de data van de TreeTalkers van de Bomenluisteraar getoond door middel van enkele grafieken. We hebben een verschillende type TreeTalkers in gebruik:
+Op deze webpagina worden de data van de TreeTalkers van de Bomenluisteraar getoond door middel van enkele grafieken. We hebben verschillende types TreeTalker in gebruik:
 
 -   Cyber met onder meer een dendrometer en sapstroommeter ([informatie producent](https://www.nature4.org/treetalkercyber))
 
