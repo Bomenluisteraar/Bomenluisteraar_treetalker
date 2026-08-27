@@ -9,6 +9,11 @@ read_tt <- function(data_id="", con_type="IoT", time_zone="Europe/Amsterdam") {
     data_location <- paste0("http://nature4cloud.org:5001/downloads/TTCyber/", data_location, "/data.txt")
   }
   data_tt <- read.csv(data_location, sep = ";", header = FALSE)
-  data_tt$V1 <- dmy_hms(data_tt$V1, tz=time_zone)
+  data_tt$V1 <- dmy_hms(data_tt$V1) # convert to POSIXct 
+  # if timezone is set, set to local time
+  if (!is.null(time_zone)) {
+    with_tz(data_tt$V1, tzone = time_zone)
+  }
   data_tt
 }
+
