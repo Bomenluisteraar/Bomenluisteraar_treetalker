@@ -63,7 +63,8 @@ clingendael_data <- rbind(
     read_tt(data_id = "91261116"), # Tilia x europaea Veteranen-linde
     read_tt(data_id = "9B261004"), # Thuja plicata: meerstammig
     read_tt(data_id = "9B261000"), # Tilia tomentosa met graven hondjes
-    read_tt(data_id = "9B261007") # Taxodium distichum ; Moerascipres
+    read_tt(data_id = "9B261007"), # Taxodium distichum ; Moerascipres
+    read_tt(data_id = "91261122") # beuk langs laan
   ) |> 
     mutate(V1 = with_tz(V1, "Europe/Amsterdam")) |> 
     filter(V1 >= dmy("20-04-2026")) |> 
