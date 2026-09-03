@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/battery.html</loc>
-    <lastmod>2026-09-03T19:20:44.715Z</lastmod>
-  </url>
-  <url>
     <loc>https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/about.html</loc>
-    <lastmod>2026-09-03T19:20:44.715Z</lastmod>
+    <lastmod>2026-09-03T22:26:21.707Z</lastmod>
   </url>
   <url>
     <loc>https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/index.html</loc>
-    <lastmod>2026-09-03T19:20:44.731Z</lastmod>
+    <lastmod>2026-09-03T22:26:21.732Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/battery.html</loc>
+    <lastmod>2026-09-03T22:26:21.707Z</lastmod>
   </url>
 </urlset>
