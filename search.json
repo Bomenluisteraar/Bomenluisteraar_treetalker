@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "battery.html",
+    "href": "battery.html",
+    "title": "Batterijen",
+    "section": "",
+    "text": "Dit deel van de website is ter controle van de batterijspanning. Wanneer deze onder de 3600 mV komt, dient de batterij vervangen en opgeladen te worden."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Over deze website",
@@ -74,20 +81,13 @@
     "href": "index.html#deventer-rijsterborgherpark-4",
     "title": "De TreeTalkers van de Bomenluisteraar",
     "section": "Deventer: Rijsterborgherpark",
-    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-09-04 00:21:31\n20.06°C\nDe waardes lopen uiteen van 19.38°C tot 23.02°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
+    "text": "Deventer: Rijsterborgherpark\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-09-04 05:52:17\n20.31°C\nDe waardes lopen uiteen van 20.14°C tot 20.52°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
   },
   {
     "objectID": "index.html#den-haag-clingendael-4",
     "href": "index.html#den-haag-clingendael-4",
     "title": "De TreeTalkers van de Bomenluisteraar",
     "section": "Den Haag: Clingendael",
-    "text": "Den Haag: Clingendael\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-09-04 00:23:59\n20.34°C\nDe waardes lopen uiteen van 20.1°C tot 20.47°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
-  },
-  {
-    "objectID": "battery.html",
-    "href": "battery.html",
-    "title": "Batterijen",
-    "section": "",
-    "text": "Dit deel van de website is ter controle van de batterijspanning. Wanneer deze onder de 3600 mV komt, dient de batterij vervangen en opgeladen te worden."
+    "text": "Den Haag: Clingendael\n\n\n\n\n\n\n\n\n\nDe meest recente temperatuurmeting.\n\n\n\n\n\n\n\n\nGemiddelde temperatuur op 2026-09-04 05:51:45\n20.22°C\nDe waardes lopen uiteen van 19.95°C tot 20.37°C\n\n\n\n\n\n\n\nDe luchtvochtigheid over de tijd."
   }
 ]
