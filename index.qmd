@@ -293,7 +293,7 @@ value_box(
 
 De ruimtelijke spreiding van de laatst gemeten temperaturen:
 
-```{r, temperatuur_actueel_kaart_clingendael}
+```{r, temperatuur_actueel_kaart_rbp}
 
 # create data frame with latest temperature
 temp_rbp <- st_sf(rbp_data, crs = 28992) |>
