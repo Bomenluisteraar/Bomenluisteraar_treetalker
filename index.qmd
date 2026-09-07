@@ -291,6 +291,27 @@ value_box(
 
 ```
 
+De ruimtelijke spreiding van de laatst gemeten temperaturen:
+
+```{r, temperatuur_actueel_kaart_clingendael}
+
+# create data frame with latest temperature
+temp_rbp <- st_sf(rbp_data, crs = 28992) |>
+  group_by(V2) |> 
+  filter(V1 == max(V1)) |> 
+  mutate(temperature = round(V13/100,2)) 
+# colour palette
+temp_pal <- colorNumeric("plasma", temp_rbp$temperature)
+# map values
+leaflet(st_transform(temp_rbp, crs = 4326)) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~paste0(soort, " (", V2, ")"), color = ~temp_pal(temperature), stroke = FALSE, fillOpacity = 0.5) |> 
+  addLegend(pal = temp_pal, values = temp_rbp$temperature,
+          title = "Temperatuur", position = "topright")
+
+```
+
+
 De luchtvochtigheid over de tijd.
 
 ```{r, luchtvochtigheid_rbp}
@@ -339,6 +360,26 @@ value_box(
   showcase = bs_icon("thermometer"),
   theme = "primary",
   )
+
+```
+
+De ruimtelijke spreiding van de laatst gemeten temperaturen:
+
+```{r, temperatuur_actueel_kaart_clingendael}
+
+# create data frame with latest temperature
+temp_clingendael <- st_sf(clingendael_data, crs = 28992) |>
+  group_by(V2) |> 
+  filter(V1 == max(V1)) |> 
+  mutate(temperature = round(V13/100,2)) 
+# colour palette
+temp_pal <- colorNumeric("plasma", temp_clingendael$temperature)
+# map values
+leaflet(st_transform(temp_clingendael, crs = 4326)) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~paste0(soort, " (", V2, ")"), color = ~temp_pal(temperature), stroke = FALSE, fillOpacity = 0.5) |> 
+  addLegend(pal = temp_pal, values = temp_clingendael$temperature,
+          title = "Temperatuur", position = "bottomright")
 
 ```
 
