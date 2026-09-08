@@ -34,7 +34,6 @@ library(leaflet)
 library(readODS)
 
 # read data
-
 # static data
 tt_rbp_info <- read_ods("data/tree_talkers_Rijsterborgherpark.ods")
 tt_clingendael_info <- read_ods("data/tree_talkers_Clingendael.ods")
