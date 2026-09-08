@@ -127,7 +127,6 @@ leaflet(st_transform(treetalkers, crs = 4326)) |>
   addTiles() |> 
   addCircleMarkers(label = ~paste0(soort, " (", treetalker_id, ")"), color = ~species_pal(soort), stroke = FALSE, fillOpacity = 0.5) 
 
-
 ```
 
 
