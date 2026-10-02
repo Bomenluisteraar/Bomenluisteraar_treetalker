@@ -7,6 +7,7 @@ website:
   site-url: "https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/"
   repo-url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker
   repo-actions: [issue]
+  favicon: "img/IconBomenluisteraar.png"
   sidebar:
     logo: "img/LogoBomenluisteraar.png"
   navbar: 
