@@ -3,14 +3,16 @@ project:
 
 website:
   page-navigation: true
-  title: "Bomenluisteraar: treetalkers"
+  title: "Bomenluisteraar: verhalen uit de sensoren"
   site-url: "https://bomenluisteraar.github.io/Bomenluisteraar_treetalker/"
   repo-url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker
   repo-actions: [issue]
-  navbar:
+  sidebar:
+    logo: "img/LogoBomenluisteraar.png"
+  navbar: 
     left:
       - href: index.qmd
-        text: "Bomenluisteraar: treetalkers"
+        text: "Sensordata"
       - href: battery.qmd
         text: "Batterijspanning"
       - href: about.qmd
@@ -22,6 +24,7 @@ website:
             url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker
           - text: Report a Bug
             url: https://github.com/Bomenluisteraar/Bomenluisteraar_treetalker/issues
+    
 format:
   html:
     theme: cosmo
