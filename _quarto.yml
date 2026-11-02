@@ -16,6 +16,8 @@ website:
         text: "Sensordata"
       - href: battery.qmd
         text: "Batterijspanning"
+      - href: individual_trees.qmd
+        text: "Individuele bomen"
       - href: about.qmd
         text: "Over deze website"
     right:

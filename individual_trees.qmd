@@ -1,0 +1,82 @@
+---
+title: "De individuele bomen"
+format: html
+date: today
+author: Ronald M. Visser
+---
+
+De individuele bomen worden hier beschreven per park en per boom. Dit is op dit moment in opbouw, dus nog niet alle bomen zijn zichtbaar.
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(ggplot2)
+library(dplyr)
+library(ggpubr)
+library(sf)
+library(lubridate)
+
+# read data
+
+clingendael_data <- readRDS("data/clingendael_data.rds")
+clingendael_soil <- readRDS("data/clingendael_soil.rds")
+
+rbp_data <- readRDS("data/rbp_data.rds")
+rbp_soil <- readRDS("data/rbp_soil.rds")
+
+```
+
+## Rijsterborgherpark
+
+### Zomereik
+
+De groei
+```{r, rbp_eik, fig.height=4}
+rbp_eik <- rbp_data |> 
+  filter(soort == "Quercus robur") 
+
+rbp_eik |> 
+  filter(V3==8) |>
+  ggplot(aes(x=V1,y=V15)) + geom_line() + 
+  labs(x="Tijd", y="Boomgroei (d.n.)") 
+
+```
+Beweging
+
+```{r, rbp_eik_movement, fig.height=4}
+ggarrange(
+  rbp_eik |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V6)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in x-richting (st.dev)"),
+  rbp_eik |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V8)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in y-richting (st.dev)"),
+  rbp_eik |>
+    filter(V3==8) |>
+    ggplot(aes(x=V1,y=V10)) + geom_line() + 
+    labs(x="Tijd", y="Afwijking in z-richting (st.dev)"),
+  ncol = 3)
+
+```
+
+Temperatuur en luchtvochtigheid
+
+```{r, rbp_eik_temp_vocht, fig.height= 4}
+
+ggarrange(
+  rbp_eik |> 
+    filter(V3==8) |>
+    mutate(day_date = floor_date(V1, unit = 'day')) |> 
+    ggplot(aes(x=day_date,y=V13/100)) +
+    geom_boxplot(aes(group = day_date), outlier.size = 0.1) + 
+    labs(x="Tijd", y="Temperatuur (graden)") + geom_smooth(),
+  rbp_eik |>
+    filter(V3==8) |> 
+    mutate(day_date = floor_date(V1, unit = 'day')) |> 
+    ggplot(aes(x=V1,y=V14/100)) + 
+    geom_boxplot(aes(group = day_date), outlier.size = 0.1) +
+    labs(x="Tijd", y="Luchtvochtigheid (%)") + geom_smooth(),
+  ncol = 2)
+
+```
