@@ -100,6 +100,8 @@ saveRDS(rbp_soil, "data/rbp_soil.rds")
 
 # Kaart met de verschillense sensoren
 
+Hieronder staan twee kaarten voor de beide parken met daarop de locaties van de verschillende boom-sensoren (TreeTalkers) gevisualiseerd.
+
 ## Deventer: Rijsterborgherpark
 
 ```{r, locaties_rbp}
